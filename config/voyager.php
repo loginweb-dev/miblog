@@ -80,7 +80,7 @@ return [
 
     'database' => [
         'tables' => [
-            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
+            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings', 'oauth_access_tokens', 'oauth_auth_codes', 'oauth_clients', 'oauth_personal_access_clients', 'oauth_refresh_tokens', 'permissions', 'translations', 'user_roles', 'menus', 'roles'],
         ],
         'autoload_migrations' => true,
     ],
@@ -144,7 +144,9 @@ return [
         ],
 
         'widgets' => [
-
+            'App\\Widgets\\Parameters',
+            'App\\Widgets\\Bread',
+            'App\\Widgets\\Users',
         ],
 
     ],
@@ -188,6 +190,7 @@ return [
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
         //'css/custom.css',
+        'storage/resources/readable.css',
     ],
 
     'additional_js' => [

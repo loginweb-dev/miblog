@@ -15,11 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('canInstall');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('login/facebbok', 'SocialiteController@redirectToProvider');
+Route::get('login/facebbok/callback', 'SocialiteController@handleProviderCallback');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

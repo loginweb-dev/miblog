@@ -28,7 +28,7 @@ class SettingsTableSeeder extends Seeder
                 'display_name' => __('voyager::seeders.settings.site.description'),
                 'value'        => __('voyager::seeders.settings.site.description'),
                 'details'      => '',
-                'type'         => 'text',
+                'type'         => 'text_area',
                 'order'        => 2,
                 'group'        => 'Site',
             ])->save();
@@ -74,7 +74,7 @@ class SettingsTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => __('voyager::seeders.settings.admin.title'),
-                'value'        => 'Voyager',
+                'value'        => 'CmsWeb',
                 'details'      => '',
                 'type'         => 'text',
                 'order'        => 1,
@@ -86,9 +86,9 @@ class SettingsTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => __('voyager::seeders.settings.admin.description'),
-                'value'        => __('voyager::seeders.settings.admin.description_value'),
+                'value'        => 'Software Inteligente para crear y administrar contenido dinamico en internet.',
                 'details'      => '',
-                'type'         => 'text',
+                'type'         => 'text_area',
                 'order'        => 2,
                 'group'        => 'Admin',
             ])->save();
