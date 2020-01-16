@@ -130,7 +130,7 @@ return [
     | route, abort, dump, 404, default, ''
     |
     */
-    'installedAlreadyAction' => '',
+    'installedAlreadyAction' => 'url',
 
     /*
     |--------------------------------------------------------------------------

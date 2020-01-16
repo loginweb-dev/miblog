@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('canInstall');
 
 
 Route::group(['prefix' => 'admin'], function () {
