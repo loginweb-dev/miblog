@@ -56,6 +56,7 @@ return [
 
     'storage' => [
         'disk' => env('FILESYSTEM_DRIVER', 'public'),
+        // 'disk' => env('FILESYSTEM_DRIVER', 'public'),
     ],
 
     /*
@@ -190,7 +191,7 @@ return [
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
         //'css/custom.css',
-        'storage/resources/readable.css',
+        'vendor/admin/readable.css',
     ],
 
     'additional_js' => [
