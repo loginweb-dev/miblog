@@ -15,9 +15,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url('/') }}/vendor/whatsapp/floating-wpp.css">
     @laravelPWA
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -75,7 +77,26 @@
         </main>
     </div>
 
+    <div id="myWP"></div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="{{ url('/') }}/vendor/whatsapp/floating-wpp.js"></script>
+    <script>
+    $('#myWP').floatingWhatsApp({
+        phone: '{{ setting('whatsapp.phone') }}',
+        popupMessage: '{{ setting('whatsapp.popupMessage') }}',
+        message: '{{ setting('whatsapp.message') }}',
+        showPopup: true,
+        showOnIE: true,
+        headerTitle: '{{ setting('whatsapp.headerTitle') }}',
+        headerColor: '{{ setting('whatsapp.color') }}',
+        backgroundColor: '{{ setting('whatsapp.color') }}',
+        buttonImage: '<img src="{{ asset('storage/'.setting('whatsapp.buttonImage') ) }}" />',
+        position: '{{ setting('whatsapp.position') }}',
+        autoOpenTimeout: {{ setting('whatsapp.autoOpenTimeout') }},
+        size: '{{ setting('whatsapp.size') }}'
+    });
+    </script>
 </body>
 </html>
