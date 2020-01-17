@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.landingpage');
 })->middleware('canInstall');
 
 Auth::routes();
