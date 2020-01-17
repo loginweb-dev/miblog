@@ -180,7 +180,7 @@ class SettingsTableSeeder extends Seeder
          if (!$setting->exists) {
              $setting->fill([
                  'display_name' => 'Color',
-                 'value'        => '#9A4BED',
+                 'value'        => '#343A40',
                  'details'      => '',
                  'type'         => 'text',
                  'order'        => 5,

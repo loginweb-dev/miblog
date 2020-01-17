@@ -21,7 +21,7 @@
 <body>
 
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        {{ menu('primary', 'layouts.menu') }}
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -92,7 +92,7 @@
         headerTitle: '{{ setting('whatsapp.headerTitle') }}',
         headerColor: '{{ setting('whatsapp.color') }}',
         backgroundColor: '{{ setting('whatsapp.color') }}',
-        buttonImage: '<img src="{{ asset('storage/'.setting('whatsapp.buttonImage') ) }}" />',
+        buttonImage: '<img src="{{ Voyager::Image(setting('whatsapp.buttonImage')) }}" />',
         position: '{{ setting('whatsapp.position') }}',
         autoOpenTimeout: {{ setting('whatsapp.autoOpenTimeout') }},
         size: '{{ setting('whatsapp.size') }}'
